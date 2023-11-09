@@ -44,13 +44,13 @@ class FamilyStructure:
     def add_member(self, id, first_name, age, lucky_numbers):
         for member in self._members:
             if member["id"] == id:
-                raise ValueError("ID already exists. Please enter a unique ID")
+                return "ID already exists, please pick new one"
         new_member = {
             "id": id,
             "first_name": first_name,
             "last_name": self.last_name,
             "age": age,
-            "Lucky Numbers": lucky_numbers
+            "lucky_numbers": lucky_numbers
         }
         self._members.append(new_member)
 
